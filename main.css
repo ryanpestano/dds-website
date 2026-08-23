@@ -1,3 +1,9 @@
+:root {
+    --accent-color: #CBC3E3;
+    --text-color: #000000;
+    --bg-color: #ffffff;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,48 +12,81 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-color);
 }
 
 .site-header {
-    background-color: #1f2937;
-    color: #ffffff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     position: sticky;
     top: 0;
     z-index: 100;
+    
+    
 }
 
 .header-inner {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1rem 0;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.site-logo-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .site-logo {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.site-logo-img {
+    display: block;
+    height: 100px;
+    width: auto;
 }
 
 .site-nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
+    padding-right: 75px;
 }
 
 .site-nav a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1rem;
     padding: 0.5rem 0;
+    font-weight:bold;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
-    color: #93c5fd;
+    color: var(--accent-color);
+}
+
+.site-nav a.active {
+    color: var(--accent-color);
 }
 
 /* Mobile nav toggle: hidden on desktop */
@@ -71,7 +110,7 @@ body {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--text-color);
     border-radius: 2px;
 }
 
@@ -100,10 +139,11 @@ body {
         flex-direction: column;
         gap: 0;
         padding-top: 1rem;
+        padding-right: 0;
     }
 
     .site-nav li {
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid rgba(203, 195, 227, 0.3);
     }
 
     .site-nav a {
@@ -115,10 +155,14 @@ body {
 /* Small mobile devices */
 @media (max-width: 400px) {
     .header-inner {
-        padding: 0.75rem 1rem;
+        padding: 0.75rem 1rem 0.75rem 0;
     }
 
     .site-logo {
         font-size: 1.25rem;
+    }
+
+    .site-logo-img {
+        height: 32px;
     }
 }
