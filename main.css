@@ -172,12 +172,13 @@ a:focus {
 
 .site-slideshow {
     position: relative;
-    margin:30px auto;
+    margin: 30px auto;
     
     width: 80%;
-    height: 80vh;
+    max-width: 1140px;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
-    background-color: #000;
+    background-color: #ffffff;
 }
 
 .slideshow-track {
@@ -188,10 +189,11 @@ a:focus {
 
 .slide {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    top: -9px;
+    left: -9px;
+    width: calc(100% + 18px);
+    height: calc(100% + 18px);
+    object-fit: contain;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -211,9 +213,8 @@ a:focus {
 }
 .contact-button {
     position: absolute;
-    left: 50%;
-    bottom: 85%;
-    transform: translateX(-50%);
+    top: 1rem;
+    right: 1rem;
     z-index: 1;
 }
 
@@ -226,6 +227,7 @@ a:focus {
     padding: 0.75em 2em;
     font-size: clamp(0.75rem, 1.1vw + 0.3rem, 1rem);
     font-weight: bold;
+    white-space: nowrap;
     cursor: pointer;
 }
 
@@ -274,7 +276,7 @@ a:focus {
 
 @media (max-width: 768px) {
     .site-slideshow {
-        height: 40vh;
+        width: 95%;
     }
 }
 
