@@ -253,6 +253,24 @@ a:focus {
     height: 20%;
     background-color: var(--accent-color);
 }
+.mapouter{
+    position:relative;
+    text-align:right;
+    width:100%;
+    height:450px;
+    margin-top: 2%;
+}
+
+.gmap_canvas{
+    overflow:hidden;
+    background:none!important;
+    width:100%;
+    height:450px
+}
+
+.gmap_iframe{
+    width:100%!important;height:450px!important
+}
 
 @media (max-width: 768px) {
     .site-slideshow {
