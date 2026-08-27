@@ -172,19 +172,20 @@ a:focus {
 
 .site-slideshow {
     position: relative;
-    margin: 30px auto;
-    
-    width: 80%;
+    margin: 30px auto 46px;
+
+    width: 50%;
     max-width: 1140px;
     aspect-ratio: 3 / 2;
-    overflow: hidden;
     background-color: #ffffff;
+    container-type: inline-size;
 }
 
 .slideshow-track {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .slide {
@@ -205,7 +206,7 @@ a:focus {
 .slideshow-dots {
     position: absolute;
     left: 50%;
-    bottom: 1rem;
+    bottom: -1.5rem;
     transform: translateX(-50%);
     display: flex;
     gap: 0.5rem;
@@ -213,8 +214,8 @@ a:focus {
 }
 .contact-button {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 2.4cqw;
+    right: 2cqw;
     z-index: 1;
 }
 
@@ -225,7 +226,7 @@ a:focus {
     text-decoration: none;
     border-radius: 0.375em;
     padding: 0.75em 2em;
-    font-size: clamp(0.75rem, 1.1vw + 0.3rem, 1rem);
+    font-size: 1.4cqw;
     font-weight: bold;
     white-space: nowrap;
     cursor: pointer;
@@ -242,12 +243,12 @@ a:focus {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--accent-color);
     cursor: pointer;
 }
 
 .dot.active {
-    background-color: var(--accent-color);
+    background-color: #5f5f5f;
 }
 
 .additional-info{
@@ -259,7 +260,7 @@ a:focus {
     position:relative;
     text-align:right;
     width:100%;
-    height:450px;
+    height:42%;
     margin-top: 2%;
 }
 
@@ -267,11 +268,11 @@ a:focus {
     overflow:hidden;
     background:none!important;
     width:100%;
-    height:450px
+    height:100%;
 }
 
 .gmap_iframe{
-    width:100%!important;height:450px!important
+    width:100%!important;height:100%!important
 }
 
 @media (max-width: 768px) {
